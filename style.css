@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+body {
+  background-color: #1e1f26;
+  font-family: 'Nunito', sans-serif;
+}
+
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: white;
+  background-color: #f0810f;
+}
+
+.app {
+  width: 600px;
+  margin: auto;
+}
+
+.to-do-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #1e1f26;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 20px;
+}
+
+.to-do-input input{
+  width: 200px;
+  font-family: inherit;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.to-do-input button{
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.to-do-list i{
+  color: lightgray;
+  cursor: pointer;
+}
+
+.to-do-list .fa-pen-to-square {
+  color: #4d648d;
+}
+
+.to-do-list button{
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+.input-controller{
+  display: flex;
+  gap: 10px;
+}
+
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 1.4;
+  color:gray;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.30s ease-in-out;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px #283655;
+  border: 1px solid #283655;
+}
+
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+.update-controller {
+  display: none;
+}
+
+@media(max-width: 768px){
+  .app {
+    width: 95%;
+  }
+
+  .to-do-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .to-do-input {
+    display: flex;
+  }
+
+  .to-do-input input {
+    width: 300px;
+  }
+
+}
