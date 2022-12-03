@@ -1,35 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
 
+/* #5b7065, black */
 body {
-  background-color: #1e1f26;
-  font-family: 'Nunito', sans-serif;
+  background: rgba(48, 64, 64, 1.0); 
+  background: -webkit-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+  background: -moz-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+  background: radial-gradient(ellipse at center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+  font-family: 'Shadows Into Light', cursive;
+  min-height: 100vh;
 }
 
 button {
   height: fit-content;
   cursor: pointer;
-  color: white;
-  background-color: #f0810f;
+  color: #04202c;
+  background-color: #c9d1c8;
 }
 
 .app {
   width: 600px;
   margin: auto;
+  padding-top: 50px;
+  color: white;
 }
 
-.to-do-header{
+.input-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: #1e1f26;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 20px 20px;
+  padding: 0px 0px 10px 0px;
 }
 
-.to-do-input input{
-  width: 200px;
+.to-do-input input {
+  width: 250px;
   font-family: inherit;
   border: none;
   border-top-left-radius: 10px;
@@ -38,7 +47,8 @@ button {
   outline: none;
 }
 
-.to-do-input button{
+.to-do-input button {
+  color: #5b7065;
   font-family: inherit;
   border: none;
   padding: 10px;
@@ -49,20 +59,19 @@ button {
 .to-do-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 0 15px;
+  gap: 15px;
 }
 
-.to-do-list i{
-  color: lightgray;
+.to-do-list i {
+  color: #c9d1c8;
   cursor: pointer;
 }
 
 .to-do-list .fa-pen-to-square {
-  color: #4d648d;
+  color: #5b7065;
 }
 
-.to-do-list button{
+.to-do-list button {
   padding: 8px;
   border-radius: 10px;
   cursor: pointer;
@@ -70,17 +79,17 @@ button {
   border: none;
 }
 
-.item{
+.item {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  padding: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
-.input-controller{
+.input-controller {
   display: flex;
   gap: 10px;
 }
@@ -91,18 +100,16 @@ button {
   border: none;
   resize: none;
   line-height: 1.4;
-  color:gray;
-  padding: 4px;
+  color: white;
   border-radius: 10px;
-  background-color: white;
-  font-size: 1rem;
+  background-color: transparent;
+  font-size: 1.2rem;
   font-family: inherit;
   transition: all 0.30s ease-in-out;
 }
 
 textarea:focus {
-  box-shadow: 0 0 5px #283655;
-  border: 1px solid #283655;
+  box-shadow: 0 0 5px white;
 }
 
 .edit-controller {
@@ -114,12 +121,13 @@ textarea:focus {
   display: none;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .app {
     width: 95%;
+    text-align: center;
   }
 
-  .to-do-header {
+  .input-header {
     flex-direction: column;
     padding-bottom: 20px;
   }
