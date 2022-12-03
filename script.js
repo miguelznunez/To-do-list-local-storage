@@ -19,7 +19,7 @@ function displayItems(){
                 <div class="input-controller">
                   <textarea disabled>${itemsArray[i]}</textarea>
                   <div class="edit-controller">
-                    <i class="fa-regular fa-square-minus deleteBtn"></i>
+                    <i class="fa-solid fa-check deleteBtn"></i>
                     <i class="fa-solid fa-pen-to-square editBtn"></i>
                   </div>
                 </div>
