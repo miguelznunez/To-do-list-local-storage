@@ -5,8 +5,8 @@ document.querySelector("#enter").addEventListener("click", () => {
   createItem(item)
 })
 
-document.addEventListener("input", function(event){
-  if(event.key === 'Enter'){
+document.querySelector("#item").addEventListener("keypress", (e) => {
+  if(e.key === "Enter"){
     const item = document.querySelector("#item")
     createItem(item)
   }
