@@ -5,6 +5,13 @@ document.querySelector("#enter").addEventListener("click", () => {
   createItem(item)
 })
 
+document.addEventListener("input", function(event){
+  if(event.key === 'Enter'){
+    const item = document.querySelector("#item")
+    createItem(item)
+  }
+})
+
 function displayDate(){
   let date = new Date()
   date = date.toString().split(" ")
